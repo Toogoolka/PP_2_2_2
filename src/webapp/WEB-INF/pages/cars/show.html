@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title th:text="${car.getLicensePlate()}">Car</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: #f1e1c3;
+
+            font-family: "Courier New", sans-serif;
+            font-size: 26px;
+        }
+        .container{
+            width: 70%;
+            margin-top: 150px;
+            border: 3px dotted #2a2a2a;
+            padding: 18px 42px;
+        }
+        .header{
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="header">CAR #<span th:text="${car.getLicensePlate()}" /></h1>
+        <p class="list"><b>Id:</b> <span th:text="${car.getId()}" /></p>
+        <p class="list"><b>Model:</b> <span th:text="${car.getModel()}" /></p>
+        <p class="list"><b>Class:</b> <span th:text="${car.getSeries()}" /></p>
+        <p class="list"><b>License plate:</b> <span th:text="${car.getLicensePlate()}" /></p>
+    </div>
+</body>
+</html>
