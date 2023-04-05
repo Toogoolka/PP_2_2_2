@@ -9,18 +9,18 @@ import java.util.stream.Collectors;
 
 @Component
 public class CarDAOImpl implements CarDAO {
-    private static Long id;
+    private static Long identificator;
     private List<Car> carsList;
 
     {
         carsList = new ArrayList<>();
-        id = 0L;
+        identificator = 0L;
 
-        carsList.add(new Car(++id, "BMW", "business", "A001TA"));
-        carsList.add(new Car(++id, "Mercedess", "business", "Q002BC"));
-        carsList.add(new Car(++id, "Porche", "business", "R003PO"));
-        carsList.add(new Car(++id, "Audi", "sport", "U004SA"));
-        carsList.add(new Car(++id, "Ferrari", "sport", "A005XV"));
+        carsList.add(new Car(++identificator, "BMW", "business", "A001TA"));
+        carsList.add(new Car(++identificator, "Mercedess", "business", "Q002BC"));
+        carsList.add(new Car(++identificator, "Porche", "business", "R003PO"));
+        carsList.add(new Car(++identificator, "Audi", "sport", "U004SA"));
+        carsList.add(new Car(++identificator, "Ferrari", "sport", "A005XV"));
     }
 
     public List<Car> showAll() {
