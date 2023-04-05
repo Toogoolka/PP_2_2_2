@@ -1,4 +1,4 @@
-package web.DAO;
+package web.dao;
 
 import org.springframework.stereotype.Component;
 import web.models.Car;
@@ -9,18 +9,18 @@ import java.util.stream.Collectors;
 
 @Component
 public class CarDAOImpl implements CarDAO {
-    private static Long IDENTIFICATOR;
+    private static Long id;
     private List<Car> carsList;
 
     {
         carsList = new ArrayList<>();
-        IDENTIFICATOR = 0L;
+        id = 0L;
 
-        carsList.add(new Car(++IDENTIFICATOR, "BMW", "business", "A001TA"));
-        carsList.add(new Car(++IDENTIFICATOR, "Mercedess", "business", "Q002BC"));
-        carsList.add(new Car(++IDENTIFICATOR, "Porche", "business", "R003PO"));
-        carsList.add(new Car(++IDENTIFICATOR, "Audi", "sport", "U004SA"));
-        carsList.add(new Car(++IDENTIFICATOR, "Ferrari", "sport", "A005XV"));
+        carsList.add(new Car(++id, "BMW", "business", "A001TA"));
+        carsList.add(new Car(++id, "Mercedess", "business", "Q002BC"));
+        carsList.add(new Car(++id, "Porche", "business", "R003PO"));
+        carsList.add(new Car(++id, "Audi", "sport", "U004SA"));
+        carsList.add(new Car(++id, "Ferrari", "sport", "A005XV"));
     }
 
     public List<Car> showAll() {
